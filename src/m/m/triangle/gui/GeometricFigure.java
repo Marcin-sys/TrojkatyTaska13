@@ -71,5 +71,5 @@ public class GeometricFigure {
             System.out.println("podany szesciokat nie jest foremny");
         }
     }
-    }
+
 }

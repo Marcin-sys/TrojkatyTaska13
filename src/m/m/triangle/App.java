@@ -65,15 +65,24 @@ public class App {
     Pięciokąt Foremny - boki: 5, 5, 5, 5, 5 - obwód: 25 - pole: 43.012
     W przykładzie podałem 3 zestawy bo nie chciało mi się więcej pisać - w treści zadania macie 5 zestawów.
     Do zrobienia tego programu użyjcie dziedziczenia, polimorfizmu i przesłaniania metod.
+
+
     Dla chętnych:
     Dodaj do programu obsługę zestawu składającego się z jednej liczby - będzie to koło o takim promieniu.
-    Rozbuduj program tak aby nie przyjmował zawsze 5 zestawów. Po uruchomieniu programu najpierw podaję liczbę zestawów, a następnie podaję zestawy boków. Jeśli jako pierwsze podam 10 to program przyjmie 10 zestawów boków i stworzy 10 figur.
+    Rozbuduj program tak aby nie przyjmował zawsze 5 zestawów. Po uruchomieniu programu najpierw
+    podaję liczbę zestawów, a następnie podaję zestawy boków. Jeśli jako pierwsze podam 10 to program
+    przyjmie 10 zestawów boków i stworzy 10 figur.
     Na tych stronach znajdziecie wzory jak obliczyć pola figur posiadając jedynie boki:
     https://www.matemaks.pl/wzory-na-pole-trojkata.html
     https://calcoolator.pl/obwod-pole-powierzchni-przekatna-pieciokata.html
     https://matematykaszkolna.pl/strona/882.html
-    Zakładam że wiecie jak obliczyć obwody i pola kwadratów czy prostokątów. Gdyby ktoś jednak nie wiedział to poszukajcie w internecie albo napiszcie :)
-    Do liczenia może wam się przydać klasa wbudowana w Javę - Math - posiada gotowe metody do obliczania pierwiastków, potęg itp :) Do zamieniania stringa na integera przyda wam się metoda parseInt(String) z klasy Integer. Przykładowe użycie:
+    Zakładam że wiecie jak obliczyć obwody i pola kwadratów czy prostokątów.
+     Gdyby ktoś jednak nie wiedział to poszukajcie w internecie albo napiszcie :)
+    Do liczenia może wam się przydać klasa wbudowana w Javę - Math -
+     posiada gotowe metody do obliczania pierwiastków, potęg itp :)
+     Do zamieniania stringa na integera przyda wam się metoda
+
+     parseInt(String) z klasy Integer. Przykładowe użycie:
     String a = "5";
     int i = Integer.parseInt(a);*/
 

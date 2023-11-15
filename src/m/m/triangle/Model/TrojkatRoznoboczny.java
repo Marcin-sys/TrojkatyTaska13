@@ -1,4 +1,20 @@
 package m.m.triangle.Model;
 
-public class TrojkatRoznoboczny {
+public class TrojkatRoznoboczny extends Trojkat{
+    public TrojkatRoznoboczny(int bokA, int bokB, int bokC,
+                              int obwod, int polePowierzchni) {
+        super(bokA, bokB, bokC, obwod, polePowierzchni);
+
+    }
+
+    @Override
+    public String toString() {
+        return "TrojkatRoznoboczny{" +
+                "bokA=" + bokA +
+                ", bokB=" + bokB +
+                ", bokC=" + bokC +
+                ", obwod=" + obwod +
+                ", polePowierzchni=" + polePowierzchni +
+                '}';
+    }
 }
