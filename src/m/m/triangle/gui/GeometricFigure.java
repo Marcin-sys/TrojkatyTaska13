@@ -2,22 +2,23 @@ package m.m.triangle.gui;
 
 public class GeometricFigure {
 
-    static int x = 0;
-
     public static void checkIfYouCanMakeTriangle(int [] tab){
         int a = tab[0];
         int b = tab[1];
         int c = tab[2];
 
+        boolean czyDaSieStworzycTrojkat = Math.abs(b - c) < a && a < b + c;
 
-        if (x==0){// nie da sie utworzyc trojkata
-
-        } else if (a == b && b ==c) {
-            System.out.println("triangle is rownoboczny");
-        } else if (x==0) {
-            //trojkat rownoramienny
-        } else if (x==0){
-            //trojkat rownoboczny
+        if(czyDaSieStworzycTrojkat) {
+            if (a == b && b == c) {
+                System.out.println("triangle is rownoboczny");
+            } else if (a==b || b==c || a ==c) {
+                //trojkat rownoramienny
+                System.out.println("triangle rownoramienny");
+            } else {
+                //trojkat rownoboczny
+                System.out.println("triangle roznoboczny");
+            }
         }
 /*        Dla trójkątów program rozpoznaje czy podane boki tworzą trójkąt równoboczny
         (3 3 3), trójkąt równoramienny (4 4 6) czy trójkąt równoboczny (3 4 5).*/

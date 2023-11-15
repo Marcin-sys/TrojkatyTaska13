@@ -23,29 +23,30 @@ public class GUI {
         return input;
     }
 
-    public static void sortStringToTypeOfGeometric(String input) {
+    public static int[] tableStringToTableInt(String input) {
         String[] tokens = input.split(" ");
-        int [] tab = new int[tokens.length];
-        int count = tokens.length;
+        int[] tab = new int[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
-            tab [i] = Integer.parseInt(tokens[i]);
+            tab[i] = Integer.parseInt(tokens[i]);
         }
+        return tab;
+    }
 
-        if (count ==3) {
+    public static void checkWhatGeometricYouCanMake(int[] tab) {
+        int count = tab.length;
+        if (count == 3) {
             //trójkąt
             GeometricFigure.checkIfYouCanMakeTriangle(tab);
 
-
-        } else if (count ==4) {
+        } else if (count == 4) {
             //     czworokąt
             GeometricFigure.checkIfYouCanMakeRectangle(tab);
-
 
         } else if (count == 5) {
             //     pięciokąt
             GeometricFigure.checkIfYouCanMakePieciokat(tab);
 
-        }else if (count==6){
+        } else if (count == 6) {
             //     sześciokąt
             GeometricFigure.checkIfYouCanMakeSzesciokat(tab);
         }

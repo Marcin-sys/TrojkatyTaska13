@@ -1,20 +1,31 @@
 package m.m.triangle.Model;
 
-public class Trojkat {
-
+public class FiguryGeometryczne {
     int bokA;
     int bokB;
     int bokC;
     int obwod;
     int polePowierzchni;
 
-    public Trojkat(int bokA, int bokB, int bokC,
-                   int obwod, int polePowierzchni) {
+
+    public FiguryGeometryczne(int bokA, int bokB,
+                              int bokC, int obwod, int polePowierzchni) {
         this.bokA = bokA;
         this.bokB = bokB;
         this.bokC = bokC;
         this.obwod = obwod;
         this.polePowierzchni = polePowierzchni;
+    }
+
+    @Override
+    public String toString() {
+        return "FiguryGeometryczne{" +
+                "bokA=" + bokA +
+                ", bokB=" + bokB +
+                ", bokC=" + bokC +
+                ", obwod=" + obwod +
+                ", polePowierzchni=" + polePowierzchni +
+                '}';
     }
 
     public int getBokA() {

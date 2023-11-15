@@ -91,7 +91,7 @@ public class App {
         while (numberOfInquiry < 5) {
 
             String input = GUI.getInput();
-            GUI.sortStringToTypeOfGeometric(input);
+            GUI.tableStringToTableInt(input);
 
             numberOfInquiry++;
         }
