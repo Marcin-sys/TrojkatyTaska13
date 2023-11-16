@@ -6,27 +6,27 @@ import m.m.triangle.db.FiguryGeometryczneRepository;
 public class GeometricFigureGUI {
 
 
-    public static void checkIfYouCanMakeTriangle(int[] tab, int idInTable, FiguryGeometryczneRepository db){
+    public static void checkIfYouCanMakeTriangle(int[] tab, int idInTable, FiguryGeometryczneRepository db) {
         int a = tab[0];
         int b = tab[1];
         int c = tab[2];
 
         boolean czyDaSieStworzycTrojkat = Math.abs(b - c) < a && a < b + c;
 
-        if(czyDaSieStworzycTrojkat) {
-            if (a == b && b == c)  {
+        if (czyDaSieStworzycTrojkat) {
+            if (a == b && b == c) {
                 System.out.println("Dodaje triangle is rownoboczny");
-                db.addToRepository(idInTable,new TrojkatRownoboczny(a,b,c));
-            } else if (a==b || b==c || a ==c) {
+                db.addToRepository(idInTable, new TrojkatRownoboczny(a, b, c));
+            } else if (a == b || b == c || a == c) {
                 //trojkat rownoramienny
                 System.out.println("triangle rownoramienny");
-                db.addToRepository(idInTable,new TrojkatRownoramienny(a,c,b));
+                db.addToRepository(idInTable, new TrojkatRownoramienny(a, c, b));
             } else {
                 //trojkat roznoboczny
                 System.out.println("triangle roznoboczny");
-                db.addToRepository(idInTable, new TrojkatRoznoboczny(a,b,c));
+                db.addToRepository(idInTable, new TrojkatRoznoboczny(a, b, c));
             }
-        }else {
+        } else {
             System.out.println("nie udalo sie stworzyc takiego trojkata");
 
         }
@@ -34,28 +34,29 @@ public class GeometricFigureGUI {
         (3 3 3), trójkąt równoramienny (4 4 6) czy trójkąt równoboczny (3 4 5).
         2 3 8 - z takich boków nie da się utworzyć trójkąta*/
     }
-    public static void checkIfYouCanMakeRectangle(int [] tab, int idInTable, FiguryGeometryczneRepository db) {
+
+    public static void checkIfYouCanMakeRectangle(int[] tab, int idInTable, FiguryGeometryczneRepository db) {
         int a = tab[0];
         int b = tab[1];
         int c = tab[2];
         int d = tab[3];
         // if ktory sprawdza czy da sie stworzyc czworokat nieformalny
 
-        if ( a == b && b ==c && c ==d){
+        if (a == b && b == c && c == d) {
             System.out.println("Rectangle is rownym kwadratem ");
-            db.addToRepository(idInTable, new Kwadrat(a,b,c,d));
-        }else if (a==c && b ==d){
+            db.addToRepository(idInTable, new Kwadrat(a, b, c, d));
+        } else if (a == c && b == d) {
             System.out.println("Rectangle is prostokatem");
-            db.addToRepository(idInTable, new Prostokat(a,b,c,d));
-        }else {
+            db.addToRepository(idInTable, new Prostokat(a, b, c, d));
+        } else {
             System.out.println("czworokat nieforemny");
-            db.addToRepository(idInTable, new Czworokat(a,b,c,d));
+            db.addToRepository(idInTable, new Czworokat(a, b, c, d));
         }
 /*        Dla czworokątów program rozpoznaje czy dane boki tworzą kwadrat (1 1 1 1),
                 prostokąt (2 3 2 3) czy czworokąt nieforemny (4 5 6 6).*/
     }
 
-    public static void checkIfYouCanMakePieciokat(int [] tab, int idInTable, FiguryGeometryczneRepository db) {
+    public static void checkIfYouCanMakePieciokat(int[] tab, int idInTable, FiguryGeometryczneRepository db) {
 //        Dla pięciokątów program rozpoznaje czy dane boki tworzą pięciokąt foremny (4 4 4 4 4).
         int a = tab[0];
         int b = tab[1];
@@ -63,21 +64,22 @@ public class GeometricFigureGUI {
         int d = tab[3];
         int e = tab[4];
         boolean zmienna = true;
-        for (int element : tab){
-            if (element != a){
+        for (int element : tab) {
+            if (element != a) {
                 zmienna = false;
                 break;
             }
         }
-        if (zmienna){
+        if (zmienna) {
             System.out.println("Stworzony zostal pieciokat foremny");
-            db.addToRepository(idInTable, new PieciokatForemny(a,b,c,d,e));
-        }else {
+            db.addToRepository(idInTable, new PieciokatForemny(a, b, c, d, e));
+        } else {
             System.out.println("podany pieciakat nie jest foremny");
-            db.addToRepository(idInTable, new Pieciokat(a,b,c,d,e));
+            db.addToRepository(idInTable, new Pieciokat(a, b, c, d, e));
         }
     }
-    public static void checkIfYouCanMakeSzesciokat(int [] tab , int idInTable, FiguryGeometryczneRepository db) {
+
+    public static void checkIfYouCanMakeSzesciokat(int[] tab, int idInTable, FiguryGeometryczneRepository db) {
 //        Dla sześciokątów program rozpoznaje czy dane boki tworzą sześciokąt foremny (7 7 7 7 7 7).
         int a = tab[0];
         int b = tab[1];
@@ -86,19 +88,19 @@ public class GeometricFigureGUI {
         int e = tab[4];
         int f = tab[5];
         boolean zmienna = true;
-        for (int element : tab){
+        for (int element : tab) {
             System.out.println(element);
             if (element != a) {
                 zmienna = false;
                 break;
             }
         }
-        if (zmienna){
+        if (zmienna) {
             System.out.println("Stworzony zostal szesciokat foremny");
-            db.addToRepository(idInTable, new SzesciokatForemny(a,b,c,d,e,f));
-        }else {
+            db.addToRepository(idInTable, new SzesciokatForemny(a, b, c, d, e, f));
+        } else {
             System.out.println("podany szesciokat nie jest foremny");
-            db.addToRepository(idInTable, new Szesciokat(a,b,c,d,e,f));
+            db.addToRepository(idInTable, new Szesciokat(a, b, c, d, e, f));
         }
     }
 

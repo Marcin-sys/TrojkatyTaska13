@@ -13,7 +13,7 @@ public class FiguryGeometryczne {
         this.bokA = bokA;
         this.bokB = bokB;
         this.bokC = bokC;
-        this.obwod = obliczObwod(bokA,bokB,bokC);
+        this.obwod = obliczObwod(bokA, bokB, bokC);
 
     }
 
@@ -27,7 +27,7 @@ public class FiguryGeometryczne {
                 '}';
     }
 
-    public int obliczObwod(int a, int b , int c){
+    public int obliczObwod(int a, int b, int c) {
         return a + b + c;
     }
 

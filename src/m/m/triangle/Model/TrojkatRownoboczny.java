@@ -1,6 +1,6 @@
 package m.m.triangle.Model;
 
-public class TrojkatRownoboczny extends FiguryGeometryczne{
+public class TrojkatRownoboczny extends FiguryGeometryczne {
 
 
     public TrojkatRownoboczny(int bokA, int bokB, int bokC) {
@@ -17,7 +17,6 @@ public class TrojkatRownoboczny extends FiguryGeometryczne{
                 ", polePowierzchni=" + polePowierzchni +
                 '}';
     }
-
 
 
 }

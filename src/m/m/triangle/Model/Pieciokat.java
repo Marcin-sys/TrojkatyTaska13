@@ -10,7 +10,7 @@ public class Pieciokat extends FiguryGeometryczne {
         super(bokA, bokB, bokC);
         this.bokD = bokD;
         this.bokE = bokE;
-        super.obwod = obliczObwod(bokA,bokB,bokC,bokD,bokE);
+        super.obwod = obliczObwod(bokA, bokB, bokC, bokD, bokE);
     }
 
     @Override
@@ -26,9 +26,10 @@ public class Pieciokat extends FiguryGeometryczne {
                 '}';
     }
 
-    public int obliczObwod(int a, int b , int c, int d, int e){
+    public int obliczObwod(int a, int b, int c, int d, int e) {
         return a + b + c + d + e;
     }
+
     public int getBokD() {
         return bokD;
     }

@@ -1,6 +1,6 @@
 package m.m.triangle.Model;
 
-public class TrojkatRoznoboczny extends FiguryGeometryczne{
+public class TrojkatRoznoboczny extends FiguryGeometryczne {
     public TrojkatRoznoboczny(int bokA, int bokB, int bokC) {
         super(bokA, bokB, bokC);
     }

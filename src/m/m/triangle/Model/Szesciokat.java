@@ -1,6 +1,6 @@
 package m.m.triangle.Model;
 
-public class Szesciokat extends FiguryGeometryczne{
+public class Szesciokat extends FiguryGeometryczne {
 
     int bokD;
     int bokE;
@@ -12,7 +12,7 @@ public class Szesciokat extends FiguryGeometryczne{
         this.bokD = bokD;
         this.bokE = bokE;
         this.bokF = bokF;
-        super.obwod = obliczObwod(bokA,bokB,bokC,bokD,bokE,bokF);
+        super.obwod = obliczObwod(bokA, bokB, bokC, bokD, bokE, bokF);
 
     }
 
@@ -30,9 +30,10 @@ public class Szesciokat extends FiguryGeometryczne{
                 '}';
     }
 
-    public int obliczObwod(int a, int b , int c, int d, int e, int f){
+    public int obliczObwod(int a, int b, int c, int d, int e, int f) {
         return a + b + c + d + e + f;
     }
+
     public int getBokA() {
         return bokA;
     }

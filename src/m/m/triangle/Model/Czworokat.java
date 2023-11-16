@@ -8,7 +8,7 @@ public class Czworokat extends FiguryGeometryczne {
     public Czworokat(int bokA, int bokB, int bokC, int bokD) {
         super(bokA, bokB, bokC);
         this.bokD = bokD;
-        super.obwod = obliczObwod(bokA,bokB,bokC,bokD);
+        super.obwod = obliczObwod(bokA, bokB, bokC, bokD);
     }
 
     @Override
@@ -22,7 +22,8 @@ public class Czworokat extends FiguryGeometryczne {
                 ", polePowierzchni=" + polePowierzchni +
                 '}';
     }
-    public int obliczObwod(int a, int b , int c, int d){
+
+    public int obliczObwod(int a, int b, int c, int d) {
         return a + b + c + d;
     }
 

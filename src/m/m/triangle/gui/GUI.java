@@ -20,7 +20,7 @@ public class GUI {
             for (String temp : tokens) {
                 count++;
             }
-            if (count < 3 || count > 6){
+            if (count < 3 || count > 6) {
                 System.out.println("Error!!!");
                 System.out.println("input must be min 3 numbers and max 6 numbers with space between ");
             }
