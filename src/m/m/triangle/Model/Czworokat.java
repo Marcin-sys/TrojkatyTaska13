@@ -5,8 +5,8 @@ public class Czworokat extends FiguryGeometryczne {
     int bokD;
 
 
-    public Czworokat(int bokA, int bokB, int bokC, int obwod, int polePowierzchni, int bokD) {
-        super(bokA, bokB, bokC, obwod, polePowierzchni);
+    public Czworokat(int bokA, int bokB, int bokC, int bokD) {
+        super(bokA, bokB, bokC);
         this.bokD = bokD;
     }
 

@@ -1,9 +1,8 @@
 package m.m.triangle.Model;
 
 public class SzesciokatForemny extends Szesciokat {
-    public SzesciokatForemny(int bokA, int bokB, int bokC, int bokD,
-                             int bokE, int bokF, int obwod, int polePowierzchni) {
-        super(bokA, bokB, bokC, bokD, bokE, bokF, obwod, polePowierzchni);
+    public SzesciokatForemny(int bokA, int bokB, int bokC, int bokD, int bokE, int bokF) {
+        super(bokA, bokB, bokC, bokD, bokE, bokF);
     }
 
     @Override

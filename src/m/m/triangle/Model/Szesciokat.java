@@ -7,8 +7,8 @@ public class Szesciokat extends FiguryGeometryczne{
     int bokF;
 
 
-    public Szesciokat(int bokA, int bokB, int bokC, int obwod, int polePowierzchni, int bokD, int bokE, int bokF) {
-        super(bokA, bokB, bokC, obwod, polePowierzchni);
+    public Szesciokat(int bokA, int bokB, int bokC, int bokD, int bokE, int bokF) {
+        super(bokA, bokB, bokC);
         this.bokD = bokD;
         this.bokE = bokE;
         this.bokF = bokF;

@@ -1,12 +1,14 @@
 package m.m.triangle.gui;
 
+import m.m.triangle.db.FiguryGeometryczneRepository;
+
 import java.util.Scanner;
 
 public class GUI {
 
-    private static final Scanner scanner = new Scanner(System.in);
-
-    public static String getInput() {
+    private final Scanner scanner = new Scanner(System.in);
+    private final GeometricFigureGUI geoGUI = new GeometricFigureGUI();
+    public String getInput() {
         String input = "";
         String[] tokens;
         int count = 2;
@@ -23,7 +25,7 @@ public class GUI {
         return input;
     }
 
-    public static int[] tableStringToTableInt(String input) {
+    public int[] tableStringToTableInt(String input) {
         String[] tokens = input.split(" ");
         int[] tab = new int[tokens.length];
         for (int i = 0; i < tokens.length; i++) {
@@ -32,23 +34,23 @@ public class GUI {
         return tab;
     }
 
-    public static void checkWhatGeometricYouCanMake(int[] tab) {
+    public void checkWhatGeometricYouCanMake(int[] tab, int idInTable, FiguryGeometryczneRepository db) {
         int count = tab.length;
         if (count == 3) {
             //trójkąt
-            GeometricFigure.checkIfYouCanMakeTriangle(tab);
+            GeometricFigureGUI.checkIfYouCanMakeTriangle(tab, idInTable, db);
 
         } else if (count == 4) {
             //     czworokąt
-            GeometricFigure.checkIfYouCanMakeRectangle(tab);
+            GeometricFigureGUI.checkIfYouCanMakeRectangle(tab, idInTable,db);
 
         } else if (count == 5) {
             //     pięciokąt
-            GeometricFigure.checkIfYouCanMakePieciokat(tab);
+            GeometricFigureGUI.checkIfYouCanMakePieciokat(tab);
 
         } else if (count == 6) {
             //     sześciokąt
-            GeometricFigure.checkIfYouCanMakeSzesciokat(tab);
+            GeometricFigureGUI.checkIfYouCanMakeSzesciokat(tab);
         }
     }
 }

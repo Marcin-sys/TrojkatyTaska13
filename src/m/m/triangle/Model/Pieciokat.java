@@ -6,8 +6,8 @@ public class Pieciokat extends FiguryGeometryczne {
     int bokE;
 
 
-    public Pieciokat(int bokA, int bokB, int bokC, int obwod, int polePowierzchni, int bokD, int bokE) {
-        super(bokA, bokB, bokC, obwod, polePowierzchni);
+    public Pieciokat(int bokA, int bokB, int bokC, int bokD, int bokE) {
+        super(bokA, bokB, bokC);
         this.bokD = bokD;
         this.bokE = bokE;
     }

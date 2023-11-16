@@ -9,23 +9,26 @@ public class FiguryGeometryczne {
 
 
     public FiguryGeometryczne(int bokA, int bokB,
-                              int bokC, int obwod, int polePowierzchni) {
+                              int bokC) {
         this.bokA = bokA;
         this.bokB = bokB;
         this.bokC = bokC;
-        this.obwod = obwod;
-        this.polePowierzchni = polePowierzchni;
+        this.obwod = obliczObwod(bokA,bokB,bokC);
+
     }
+
 
     @Override
     public String toString() {
-        return "FiguryGeometryczne{" +
+        return "Nie udał sie stworzyć trojkata o: {" +
                 "bokA=" + bokA +
                 ", bokB=" + bokB +
                 ", bokC=" + bokC +
-                ", obwod=" + obwod +
-                ", polePowierzchni=" + polePowierzchni +
                 '}';
+    }
+
+    public int obliczObwod(int a, int b , int c){
+        return a + b + c;
     }
 
     public int getBokA() {
