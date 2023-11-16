@@ -55,34 +55,50 @@ public class GeometricFigureGUI {
                 prostokąt (2 3 2 3) czy czworokąt nieforemny (4 5 6 6).*/
     }
 
-    public static void checkIfYouCanMakePieciokat(int [] tab) {
+    public static void checkIfYouCanMakePieciokat(int [] tab, int idInTable, FiguryGeometryczneRepository db) {
 //        Dla pięciokątów program rozpoznaje czy dane boki tworzą pięciokąt foremny (4 4 4 4 4).
         int a = tab[0];
+        int b = tab[1];
+        int c = tab[2];
+        int d = tab[3];
+        int e = tab[4];
         boolean zmienna = true;
         for (int element : tab){
-            if (element == a){
+            if (element != a){
                 zmienna = false;
+                break;
             }
         }
         if (zmienna){
             System.out.println("Stworzony zostal pieciokat foremny");
+            db.addToRepository(idInTable, new PieciokatForemny(a,b,c,d,e));
         }else {
             System.out.println("podany pieciakat nie jest foremny");
+            db.addToRepository(idInTable, new Pieciokat(a,b,c,d,e));
         }
     }
-    public static void checkIfYouCanMakeSzesciokat(int [] tab) {
+    public static void checkIfYouCanMakeSzesciokat(int [] tab , int idInTable, FiguryGeometryczneRepository db) {
 //        Dla sześciokątów program rozpoznaje czy dane boki tworzą sześciokąt foremny (7 7 7 7 7 7).
         int a = tab[0];
+        int b = tab[1];
+        int c = tab[2];
+        int d = tab[3];
+        int e = tab[4];
+        int f = tab[5];
         boolean zmienna = true;
         for (int element : tab){
-            if (element == a){
+            System.out.println(element);
+            if (element != a) {
                 zmienna = false;
+                break;
             }
         }
         if (zmienna){
             System.out.println("Stworzony zostal szesciokat foremny");
+            db.addToRepository(idInTable, new SzesciokatForemny(a,b,c,d,e,f));
         }else {
             System.out.println("podany szesciokat nie jest foremny");
+            db.addToRepository(idInTable, new Szesciokat(a,b,c,d,e,f));
         }
     }
 

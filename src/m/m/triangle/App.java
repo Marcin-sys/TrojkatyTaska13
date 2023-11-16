@@ -1,9 +1,7 @@
 package m.m.triangle;
 
-import m.m.triangle.Model.FiguryGeometryczne;
 import m.m.triangle.db.FiguryGeometryczneRepository;
 import m.m.triangle.gui.GUI;
-import m.m.triangle.gui.GeometricFigureGUI;
 
 public class App {
     /*
@@ -91,11 +89,9 @@ public class App {
 
     public static void main(String[] args) {
         FiguryGeometryczneRepository db = new FiguryGeometryczneRepository();
-        // zrobic z databasem 
         GUI gui = new GUI();
         int numberOfInquiry = 0;
         while (numberOfInquiry < 5) {
-
             String input = gui.getInput();
             gui.checkWhatGeometricYouCanMake(gui.tableStringToTableInt(input),numberOfInquiry,db);
             numberOfInquiry++;
